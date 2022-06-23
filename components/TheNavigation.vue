@@ -6,9 +6,9 @@
         </div>
 
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><NuxtLink to="/">Home</NuxtLink></li>
+            <li><NuxtLink to="/about">About</NuxtLink></li>
+            <li><NuxtLink to="/contact">Contact</NuxtLink></li>
         </ul>
 
     </nav>
@@ -36,5 +36,9 @@ ul {
 ul li {
     display: flex;
     margin-right: .5rem;
+
+}
+ul li :hover {
+    color: rgb(226, 144, 21);
 }
 </style>
