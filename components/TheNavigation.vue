@@ -2,7 +2,7 @@
 
     <nav class="nav">
         <div class="title">
-            <h1>App Title</h1>
+            <h1><NuxtLink to="/">App Title</NuxtLink></h1>
         </div>
 
         <ul>
