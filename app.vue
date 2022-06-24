@@ -1,7 +1,7 @@
 <template>
 <div>
 <TheNavigation />
-<div class="container">
+<div class="container mx-auto p-4">
     <NuxtPage />
 </div>
 </div>
@@ -9,8 +9,5 @@
 </template>
 
 <style scoped>
-.container {
-    margin-top: 2rem;
-    margin-left: 5rem;
-}
+
 </style>
