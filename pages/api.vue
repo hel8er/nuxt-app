@@ -1,9 +1,13 @@
-<script setup>
-const { data } = await useAsyncData('count', () => $fetch('https://jsonplaceholder.typicode.com/posts/1'))
-</script>
-
 <template>
-<p>Full data: {{ data }}</p>
-  id: <p>{{ data.id }}</p>
-  <h1>{{ data.title }}</h1>
+  <div>
+    {{ pending ? 'Loading' : count }}
+  </div>
 </template>
+
+<script setup>
+const { pending, data: count } = useLazyAsyncData('count', () => $fetch('https://jsonplaceholder.typicode.com/posts/1'))
+watch(count, (newCount) => {
+  // Because count starts out null, you won't have access
+  // to its contents immediately, but you can watch it.
+})
+</script>
